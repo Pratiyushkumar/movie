@@ -1,50 +1,24 @@
-# React + TypeScript + Vite
+# Overview
+ The implementation has an infinite scroll functionality to fetch movie data from the OMDb API. It allows users to search for movies by title, fetches movie details dynamically, and loads more movies as the user scrolls down the page.
+ Additionally, it includes features like:
+  - Debounced search input to reduce redundant API calls.
+  - Expandable movie cards to show/hide detailed information.
+  - Error handling for API failures or invalid search queries.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Local Development
+  - clone the Git repository using  `git clone https://github.com/Pratiyushkumar/movie.git`.
+  - install pnpm if it does not exists in your system by command `npm install -g pnpm`.
+- run the command `pnpm install`.
+- then start the project using `pnpm dev`.
+- Ensure to create a .env file with `VITE_OMDB_API_KEY=your_api_key`
+  
+### Technologies Used
+- React
+- TypeScript
+- Tailwind CSS
+- Vite
+- OMDb API
+- Lucide React Icons
 
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
-
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Production Link -
+https://movie-ixa9n6ca5-pratiyushs-projects-ca86160b.vercel.app/
